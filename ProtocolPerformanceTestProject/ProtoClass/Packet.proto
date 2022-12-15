@@ -1,0 +1,66 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Proto3";
+
+option optimize_for = SPEED;
+
+message Packet
+{
+	int32 header = 1;
+	int32 size = 2;
+}
+
+message Packets
+{
+    repeated Packet packet = 1;
+}
+
+message Vector
+{
+    float x = 1;
+    float y = 2;
+    float z = 3;
+}
+
+message Player
+{
+    string id = 1;
+    string name = 2;
+    int32 age = 3;
+    Vector pos = 4;
+}
+
+message Players
+{
+    repeated Player player = 1;
+}
+
+message Ints
+{
+    repeated int32 i = 1;
+}
+
+message String
+{
+    string str = 1;
+}
+
+message Char
+{
+    uint32 char = 1;
+}
+
+message Chars
+{
+    repeated Char chars = 1;
+}
+
+message Friend
+{
+    int32 friend = 1;
+}
+
+message Friends
+{
+    repeated Friend friend = 1;
+}
